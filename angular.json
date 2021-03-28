@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "tca-monopoly-app"
+  "defaultProject": "tca-monopoly-app",
+  "cli": {
+    "analytics": false
+  }
 }
