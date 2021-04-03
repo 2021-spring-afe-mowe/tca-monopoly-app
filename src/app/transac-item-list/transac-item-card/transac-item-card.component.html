@@ -1,11 +1,11 @@
 <div class="root">
-    <div class="transac-item" [ngClass]="{ 'income': isIncome, 'expense': !isIncome }">
+    <div class="transac-item" [ngClass]="{ 'income': item.amount >= 0, 'expense': item.amount < 0}">
         <div class="description">
-            <p>Testing</p>
+            <p>{{ item.description }}</p>
         </div>
-        <div class="ammount">
-            <p>200</p>
+        <div class="amount">
+            <p>{{ item.amount }}</p>
         </div>
-        <button type="button">Erase</button>
+        <button type="button" (click) = 'eraseEntry()'>Erase</button>
     </div>
 </div>

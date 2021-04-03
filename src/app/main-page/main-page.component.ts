@@ -16,4 +16,9 @@ export class MainPageComponent implements OnInit {
   addItems(newItem: MoneyItem) {
     this.moneyItems.push(newItem);
   }
+
+  deleteItem(item: MoneyItem) {
+    let index = this.moneyItems.indexOf(item);
+    this.moneyItems.splice(index, 1);
+  }
 }

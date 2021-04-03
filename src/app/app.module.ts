@@ -9,6 +9,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { AddItemFormComponent } from './add-item-form/add-item-form.component';
 import { TransacItemListComponent } from './transac-item-list/transac-item-list.component';
 import { TransacItemCardComponent } from './transac-item-list/transac-item-card/transac-item-card.component';
+import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TransacItemCardComponent } from './transac-item-list/transac-item-card/
     AddItemFormComponent,
     TransacItemListComponent,
     TransacItemCardComponent,
+    EditItemModalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

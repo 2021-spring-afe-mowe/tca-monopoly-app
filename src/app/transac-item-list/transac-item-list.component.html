@@ -3,13 +3,31 @@
 
         <div class="gain-column">
             <h1>Gain</h1>
-            <app-transac-item-card [isIncome]="true"></app-transac-item-card>
+
+            <div class="money-items">
+                <div *ngFor="let item of moneyItems">
+                    <app-transac-item-card
+                     *ngIf="item.amount >= 0"
+                     [item] = "item"
+                     (entryDelete)="onDelete(item)"
+                     ></app-transac-item-card>
+                </div>
+            </div>
         </div>
 
 
         <div class="loss-column">
             <h1>Loss</h1>
-            <app-transac-item-card [isIncome]="false"></app-transac-item-card>
+
+            <div class="money-items">
+                <div *ngFor="let item of moneyItems">
+                    <app-transac-item-card
+                     *ngIf="item.amount < 0"
+                     [item] = "item"
+                     (entryDelete)="onDelete(item)"
+                     ></app-transac-item-card>
+                </div>
+            </div>
         </div>
 
     </div>
