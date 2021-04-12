@@ -9,6 +9,7 @@ import { MoneyItem } from 'src/shared/models/money-item.model';
 export class TransacItemCardComponent implements OnInit {
   @Input() item: MoneyItem;
   @Output() entryDelete: EventEmitter<any> = new EventEmitter<any>();
+  @Output() cardClick: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
 
@@ -16,5 +17,9 @@ export class TransacItemCardComponent implements OnInit {
 
   eraseEntry() {
     this.entryDelete.emit();
+  }
+
+  onCardClick() {
+    this.cardClick.emit();
   }
 }

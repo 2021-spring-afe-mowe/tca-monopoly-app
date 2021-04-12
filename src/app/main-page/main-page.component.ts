@@ -8,6 +8,7 @@ import { MoneyItem } from 'src/shared/models/money-item.model';
 })
 export class MainPageComponent implements OnInit {
   moneyItems: MoneyItem[] = new Array<MoneyItem>();
+  totalMoney: number = 1500;
 
   constructor() {}
 
@@ -15,10 +16,14 @@ export class MainPageComponent implements OnInit {
 
   addItems(newItem: MoneyItem) {
     this.moneyItems.push(newItem);
+    this.totalMoney += newItem.amount;
   }
 
   deleteItem(item: MoneyItem) {
     let index = this.moneyItems.indexOf(item);
     this.moneyItems.splice(index, 1);
+    this.totalMoney -= item.amount;
   }
+
+  updateItem(UpdateEvent:) {}
 }

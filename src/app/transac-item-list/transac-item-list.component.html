@@ -10,6 +10,7 @@
                      *ngIf="item.amount >= 0"
                      [item] = "item"
                      (entryDelete)="onDelete(item)"
+                     (cardClick)="onCardClicked(item)"
                      ></app-transac-item-card>
                 </div>
             </div>
@@ -25,6 +26,7 @@
                      *ngIf="item.amount < 0"
                      [item] = "item"
                      (entryDelete)="onDelete(item)"
+                     (cardClick)="onCardClicked(item)"
                      ></app-transac-item-card>
                 </div>
             </div>
